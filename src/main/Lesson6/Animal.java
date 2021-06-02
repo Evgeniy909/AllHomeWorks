@@ -6,6 +6,9 @@ public abstract class Animal {
     private int age;
     private int maxDistance;
     private double maxJump;
+    private int satietyLevel;
+
+    private boolean satiety = false;
 
     public String getName() {
         return name;
@@ -15,11 +18,21 @@ public abstract class Animal {
         return age;
     }
 
-    protected Animal(String name, int age, int maxDistance, double maxJump) {
+    protected Animal(String name, int age, int maxDistance, double maxJump, int satietyLevel) {
         this.name = name;
         this.age = age;
         this.maxDistance = maxDistance;
         this.maxJump = maxJump;
+        this.satietyLevel = satietyLevel;
+    }
+
+    public void eating(int amountOfFood) {
+        if (satiety) {
+            throw new IllegalArgumentException("Я уже сыт!");
+        }
+        if (amountOfFood > 0) {
+            satiety = true;
+        }
     }
 
     public void run(int distance) {
@@ -49,6 +62,14 @@ public abstract class Animal {
 
     public double getMaxJump() {
         return maxJump;
+    }
+
+    public int getSatietyLevel() {
+        return satietyLevel;
+    }
+
+    public boolean isSatiety() {
+        return satiety;
     }
 }
 

@@ -2,8 +2,8 @@ package Lesson6;
 
 public class Dog extends Animal {
 
-    public Dog(String name, int age, int maxDistance, double maxJump, int maxDistanceSail) {
-        super(name,age,maxDistance,maxJump);
+    public Dog(String name, int age, int maxDistance, double maxJump, int maxDistanceSail,int satietyLevel) {
+        super(name,age,maxDistance,maxJump, satietyLevel);
         this.maxDistanceSail = maxDistanceSail;
     }
 
