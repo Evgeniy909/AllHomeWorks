@@ -26,11 +26,11 @@ public abstract class Animal {
         this.satietyLevel = satietyLevel;
     }
 
-    public void eating(int amountOfFood) {
+    public void eating(Dish theDish) {
         if (satiety) {
             throw new IllegalArgumentException("Я уже сыт!");
         }
-        if (amountOfFood > 0) {
+        if (theDish.feed(satietyLevel) > 0) {
             satiety = true;
         }
     }

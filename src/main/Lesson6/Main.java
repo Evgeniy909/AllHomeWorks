@@ -23,7 +23,7 @@ public class Main {
         for (int n = 0; n < animals.length; n++) {
 
             if (!animals[n].isSatiety()) {
-                animals[n].eating(generalDish.feed(animals[n].getSatietyLevel()));
+                animals[n].eating(generalDish);
             }
             System.out.println("Сытость " + animals[n].getName() + ": =" + animals[n].isSatiety());
         }
