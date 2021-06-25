@@ -57,8 +57,8 @@ public class Main {
         return arr;
     }
 
-    public static ArrayList<Object> arrToArrList(Object[] arr) {
-        return new ArrayList<>(Arrays.asList(arr));
+    public static <T> ArrayList<T> arrToArrList(T[] arr) {
+        return new ArrayList<T>(Arrays.asList(arr));
     }
 
 
